@@ -1,0 +1,69 @@
+.header-container {
+    background: url("../../assets/Header-img.png") center top space no-repeat;
+    min-height: 700px;
+}
+
+.vehicle_container {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 700px;
+    
+}
+
+.vehicle_block {
+    height: 100%;
+    width: 100%;
+}
+
+.text {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 90px;
+    padding-bottom: 59px;
+    width: 560px;
+}
+
+.vehicle {
+    margin-bottom: 4px;
+    p {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+}
+
+.vehicle_title {
+    margin-bottom: 10px;
+    p {
+        font-family: 'PT Serif', serif;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 50px;
+        margin: 0;
+        color: #FFFFFF;
+    }
+}
+
+.date_by_comments {
+    p {
+        font-family: 'PT Serif', serif;
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFFFFF;
+        margin: 0;
+    }
+}
+
+.by_color {
+    color: #B4B4B4;
+}
+
+.date,
+.by {
+    margin-right: 14px;
+}
