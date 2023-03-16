@@ -3,7 +3,6 @@ import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Logo from 'components/Logo/Logo'
 import Menu from 'components/Menu/Menu'
-import Vehicle from 'components/Vehicle/Vehicle'
 
 type Props = {}
 
@@ -16,7 +15,6 @@ const Header = (props: Props) => {
                     <Menu />
                 </Toolbar>
             </AppBar>
-            <Vehicle />
         </>
     )
 }
