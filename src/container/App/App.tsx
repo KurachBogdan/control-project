@@ -13,7 +13,7 @@ const App = (props: Props) => {
             <Header />
             <Main />
             <Footer />
-        </ StyledEngineProvider>
+        </StyledEngineProvider>
     )
 }
 
