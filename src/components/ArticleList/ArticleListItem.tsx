@@ -15,8 +15,8 @@ const ArticleListItem = (props: Props) => {
         <Card variant="outlined" className="card">
             <CardMedia sx={{ height: 140 }} image="/src/assets/IMG_6293.jpg" />
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                    Lizard
+                <Typography className='article_list_item_category' gutterBottom component="div">
+                    Clothes
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                     Lizards are a widespread group of squamate reptiles, with

@@ -22,9 +22,9 @@ const Vehicle = (props: Props) => {
                             <p>
                                 <span className="date">June 6, 2019</span>
                                 <span className="by">
-                                    <span className='by_color'>By</span> Rickie Baroch
+                                    <span className="by_color">By</span> Rickie
+                                    Baroch
                                 </span>
-                                4 comments
                             </p>
                         </div>
                     </div>
