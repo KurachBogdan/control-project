@@ -15,15 +15,15 @@ const HomeRight = (props: Props) => {
             <div className="right_article_list_container">
                 <Grid item md={5.7}>
                     {' '}
-                    <ArticleListItem />
+                    <ArticleListItem category='Jeans'/>
                 </Grid>
                 <Grid item md={5.7}>
                     {' '}
-                    <ArticleListItem />
+                    <ArticleListItem category='City'/>
                 </Grid>
                 <Grid item md={5.7}>
                     {' '}
-                    <ArticleListItem />
+                    <ArticleListItem category='Photography'/>
                 </Grid>
             </div>
             <Button className="wide_btn">Categories</Button>

@@ -8,15 +8,17 @@ import './ArticleListItem.scss'
 import { IconButton } from '@mui/material'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 
-type Props = {}
+type Props = {
+    category: string
+}
 
-const ArticleListItem = (props: Props) => {
+const ArticleListItem = ({category}: Props) => {
     return (
         <Card variant="outlined" className="card">
-            <CardMedia sx={{ height: 140 }} image="/src/assets/IMG_6293.jpg" />
+            <CardMedia sx={{ height: 140 }} image={"/src/assets/IMG_6293.jpg"} />
             <CardContent>
                 <Typography className='article_list_item_category' gutterBottom component="div">
-                    Clothes
+                    {category}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                     Lizards are a widespread group of squamate reptiles, with
@@ -25,7 +27,7 @@ const ArticleListItem = (props: Props) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <IconButton aria-label="add to favorites">
+                <IconButton className='icon_button' aria-label="add to favorites">
                     <FavoriteIcon />
                 </IconButton>
                 <Button className="learn_more" size="medium">

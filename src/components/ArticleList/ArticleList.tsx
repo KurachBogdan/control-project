@@ -9,43 +9,43 @@ const ArticleList = (props: Props) => {
         <Grid container className="article_list">
             <Grid item md={5.7}>
                 {' '}
-                <ArticleListItem />
+                <ArticleListItem category="Tourism" />
             </Grid>
             <Grid item md={5.7}>
                 {' '}
-                <ArticleListItem />
+                <ArticleListItem category="Sport" />
             </Grid>
             <Grid item md={5.7}>
                 {' '}
-                <ArticleListItem />
+                <ArticleListItem category="Fashion" />
             </Grid>
             <Grid item md={5.7}>
                 {' '}
-                <ArticleListItem />
+                <ArticleListItem category="Clothes" />
             </Grid>
             <Grid item md={5.7}>
                 {' '}
-                <ArticleListItem />
+                <ArticleListItem category="Clothes" />
             </Grid>
             <Grid item md={5.7}>
                 {' '}
-                <ArticleListItem />
+                <ArticleListItem category="Fashion" />
             </Grid>
             <Grid item md={5.7}>
                 {' '}
-                <ArticleListItem />
+                <ArticleListItem category="Autumn" />
             </Grid>
             <Grid item md={5.7}>
                 {' '}
-                <ArticleListItem />
+                <ArticleListItem category="Clothes" />
             </Grid>
             <Grid item md={5.7}>
                 {' '}
-                <ArticleListItem />
+                <ArticleListItem category="Summer" />
             </Grid>
             <Grid item md={5.7}>
                 {' '}
-                <ArticleListItem />
+                <ArticleListItem category="Summer" />
             </Grid>
         </Grid>
     )

@@ -1,14 +1,16 @@
 import Button from '@mui/material/Button/Button'
 import './HomeArticle.scss'
 
-type Props = {}
+type Props = {
+    category: string
+}
 
-const HomeArticle = (props: Props) => {
+const HomeArticle = ({category}: Props) => {
     return (
         <div className="main_article">
             <div className="main_article_background"></div>
             <div className="main_article_container">
-                <p className="main_article_category">Summer</p>
+                <p className="main_article_category">{category}</p>
                 <p className="main_article_title">
                     One of Saturn`s largest rings may be newer than anyone
                 </p>

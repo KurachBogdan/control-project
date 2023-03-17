@@ -7,7 +7,7 @@ type Props = {}
 const HomeLeft = (props: Props) => {
     return (
         <div className="home_left">
-            <HomeArticle />
+            <HomeArticle category="Summer" />
             <ArticleList />
         </div>
     )
