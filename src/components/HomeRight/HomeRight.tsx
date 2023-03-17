@@ -2,6 +2,7 @@ import { Button, Grid } from '@mui/material'
 import AboutTheAuthor from 'components/AboutTheAuthor/AboutTheAuthor'
 import ArticleListItem from 'components/ArticleList/ArticleListItem'
 import './HomeRight.scss'
+import Categories from 'components/Categories/Categories'
 
 type Props = {}
 
@@ -26,6 +27,7 @@ const HomeRight = (props: Props) => {
                 </Grid>
             </div>
             <Button className="wide_btn">Categories</Button>
+            <Categories />
         </div>
     )
 }
