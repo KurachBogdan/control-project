@@ -1,0 +1,18 @@
+.home_right {
+    width: 400px;
+}
+
+.wide_btn {
+    width: 100%;
+    border: 1px solid #E5E5E5;
+    text-transform: none;
+    font-family: 'PT Serif', serif;
+    font-size: 16px;
+    line-height: 21px;
+    color: black;
+    margin-bottom: 21px;
+    padding: 14px 0;
+    &:hover {
+        color: #C9A96E;
+    }
+}
