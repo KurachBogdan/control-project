@@ -1,5 +1,6 @@
-import { Button } from '@mui/material'
+import { Button, Grid } from '@mui/material'
 import AboutTheAuthor from 'components/AboutTheAuthor/AboutTheAuthor'
+import ArticleListItem from 'components/ArticleList/ArticleListItem'
 import './HomeRight.scss'
 
 type Props = {}
@@ -9,7 +10,22 @@ const HomeRight = (props: Props) => {
         <div className="home_right">
             <Button className="wide_btn">About the author</Button>
             <AboutTheAuthor />
-            
+            <Button className="wide_btn">Featured posts</Button>
+            <div className="right_article_list_container">
+                <Grid item md={5.7}>
+                    {' '}
+                    <ArticleListItem />
+                </Grid>
+                <Grid item md={5.7}>
+                    {' '}
+                    <ArticleListItem />
+                </Grid>
+                <Grid item md={5.7}>
+                    {' '}
+                    <ArticleListItem />
+                </Grid>
+            </div>
+            <Button className="wide_btn">Categories</Button>
         </div>
     )
 }

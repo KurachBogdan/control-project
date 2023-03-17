@@ -7,7 +7,7 @@
     border: 1px solid #E5E5E5;
     text-transform: none;
     font-family: 'PT Serif', serif;
-    font-size: 16px;
+    font-size: 19px;
     line-height: 21px;
     color: black;
     margin-bottom: 21px;
@@ -15,4 +15,8 @@
     &:hover {
         color: #C9A96E;
     }
+}
+
+.right_article_list_container {
+    margin-bottom: 70px;
 }
