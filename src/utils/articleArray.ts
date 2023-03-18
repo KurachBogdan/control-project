@@ -1,37 +1,48 @@
-type ArticleProps = {
+type Article = {
     category: string
+    id: number
 }
 
-const articleArray:ArticleProps[] = [
+const articleArray:Article[] = [
     {
-        category: 'Tourism'
+        id: 1,
+        category: 'Tourism',
     },
     {
-        category: 'Sport'
+        id: 2,
+        category: 'Sport',
     },
     {
-        category: 'Fashion'
+        id: 3,
+        category: 'Fashion',
     },
     {
-        category: 'Clothes'
+        id: 4,
+        category: 'Clothes',
     },
     {
-        category: 'Clothes'
+        id: 5,
+        category: 'Clothes',
     },
     {
-        category: 'Fashion'
+        id: 6,
+        category: 'Fashion',
     },
     {
-        category: 'Autumn'
+        id: 7,
+        category: 'Autumn',
     },
     {
-        category: 'Clothes'
+        id: 8,
+        category: 'Clothes',
     },
     {
-        category: 'Summer'
+        id: 9,
+        category: 'Summer',
     },
     {
-        category: 'Summer'
+        id: 10,
+        category: 'Summer',
     },
 ]
 
