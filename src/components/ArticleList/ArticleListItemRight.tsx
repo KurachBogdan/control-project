@@ -13,10 +13,10 @@ type Props = {
     image: string
 }
 
-const ArticleListItem = ({ category, image }: Props) => {
+const ArticleListItemRight = ({ category, image }: Props) => {
     return (
         <Card variant="outlined" className="card">
-            <CardMedia sx={{ height: 280 }} image={image} />
+            <CardMedia sx={{ height: 180 }} image={image} />
             <CardContent>
                 <Typography
                     className="article_list_item_category"
@@ -46,4 +46,4 @@ const ArticleListItem = ({ category, image }: Props) => {
     )
 }
 
-export default ArticleListItem
+export default ArticleListItemRight

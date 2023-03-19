@@ -1,9 +1,9 @@
 import { Button, Grid } from '@mui/material'
 import AboutTheAuthor from 'components/AboutTheAuthor/AboutTheAuthor'
-import ArticleListItem from 'components/ArticleList/ArticleListItem'
 import './HomeRight.scss'
 import Categories from 'components/Categories/Categories'
 import anotherArticleArray from 'utils/anotherArticleArray'
+import ArticleListItemRight from 'components/ArticleList/ArticleListItemRight'
 
 type Props = {}
 
@@ -17,7 +17,7 @@ const HomeRight = (props: Props) => {
                 {anotherArticleArray.map(({ id, category, image }) => (
                     <Grid item md={5.7} key={id}>
                         {' '}
-                        <ArticleListItem category={category} image={image} />
+                        <ArticleListItemRight category={category} image={image} />
                     </Grid>
                 ))}
             </div>
