@@ -10,6 +10,7 @@ const Home = (props: Props) => {
     return (
         <>
             <Vehicle />
+            {/* There should be a slider here */}
             <Container maxWidth="xl" className="home_container">
                 <HomeLeft />
                 <HomeRight />

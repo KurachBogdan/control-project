@@ -10,14 +10,19 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 
 type Props = {
     category: string
+    image: string
 }
 
-const ArticleListItem = ({category}: Props) => {
+const ArticleListItem = ({ category, image }: Props) => {
     return (
         <Card variant="outlined" className="card">
-            <CardMedia sx={{ height: 140 }} image={"/src/assets/IMG_6293.jpg"} />
+            <CardMedia sx={{ height: 140 }} image={image} />
             <CardContent>
-                <Typography className='article_list_item_category' gutterBottom component="div">
+                <Typography
+                    className="article_list_item_category"
+                    gutterBottom
+                    component="div"
+                >
                     {category}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -27,7 +32,10 @@ const ArticleListItem = ({category}: Props) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <IconButton className='icon_button' aria-label="add to favorites">
+                <IconButton
+                    className="icon_button"
+                    aria-label="add to favorites"
+                >
                     <FavoriteIcon />
                 </IconButton>
                 <Button className="learn_more" size="medium">
