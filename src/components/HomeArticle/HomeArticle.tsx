@@ -5,7 +5,7 @@ type Props = {
     category: string
 }
 
-const HomeArticle = ({category}: Props) => {
+const HomeArticle = ({ category }: Props) => {
     return (
         <div className="main_article">
             <div className="main_article_background"></div>
