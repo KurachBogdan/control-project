@@ -5,7 +5,7 @@ import articleArray from 'utils/articleArray'
 
 type Props = {}
 
-const  ArticleList = (props: Props) => {
+const ArticleList = (props: Props) => {
     return (
         <Grid container className="article_list">
             {articleArray.map(({ id, category, image }) => (

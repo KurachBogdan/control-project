@@ -12,7 +12,7 @@ const Home = (props: Props) => {
         <>
             <Vehicle />
             <NiceSwiper />
-            <Container maxWidth="xl" className="home_container">
+            <Container maxWidth="lg" className="home_container">
                 <HomeLeft />
                 <HomeRight />
             </Container>

@@ -17,7 +17,10 @@ const HomeRight = (props: Props) => {
                 {anotherArticleArray.map(({ id, category, image }) => (
                     <Grid item md={5.7} key={id}>
                         {' '}
-                        <ArticleListItemRight category={category} image={image} />
+                        <ArticleListItemRight
+                            category={category}
+                            image={image}
+                        />
                     </Grid>
                 ))}
             </div>

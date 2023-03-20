@@ -6,7 +6,7 @@ type Props = {}
 const Vehicle = (props: Props) => {
     return (
         <div className="header-container">
-            <Container maxWidth="xl" className="vehicle_container">
+            <Container maxWidth="lg" className="vehicle_container">
                 <div className="vehicle_block">
                     <div className="text">
                         <div className="vehicle">
