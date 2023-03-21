@@ -21,7 +21,7 @@ const App = (props: Props) => {
                 <Route path="recipes" element={<Recipes />} />
                 <Route path="categories" element={<Categories />} />
                 <Route path="favorite" element={<Favorite />} />
-                <Route path="featured_posts" element={<FeaturedPosts />} />
+                <Route path="featured" element={<FeaturedPosts />} />
             </Routes>
             <Footer />
         </StyledEngineProvider>

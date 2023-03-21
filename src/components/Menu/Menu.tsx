@@ -7,7 +7,7 @@ type Props = {
     recipes: string
     categories: string
     favorite: string
-    featured_posts: string
+    featured: string
 }
 
 const Menu = ({
@@ -15,7 +15,7 @@ const Menu = ({
     recipes,
     categories,
     favorite,
-    featured_posts,
+    featured,
 }: Props) => {
     return (
         <div className="menu_width">
@@ -32,7 +32,7 @@ const Menu = ({
                 <Link to={favorite}>{favorite}</Link>
             </Button>
             <Button className="nav">
-                <Link to={featured_posts}>{featured_posts}</Link>
+                <Link to={featured}>{featured}</Link>
             </Button>
         </div>
     )

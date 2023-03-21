@@ -15,7 +15,7 @@ const Footer = (props: Props) => {
                         recipes="Recipes"
                         categories="Categories"
                         favorite="Favorite"
-                        featured_posts="Featured posts"
+                        featured="Featured posts"
                     />
                 </div>
                 <div className="icons_container">

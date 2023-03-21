@@ -17,7 +17,7 @@ const Header = (props: Props) => {
                         recipes="Recipes"
                         categories="Categories"
                         favorite="Favorite"
-                        featured_posts="Featured posts"
+                        featured="Featured posts"
                     />
                 </Toolbar>
             </AppBar>
