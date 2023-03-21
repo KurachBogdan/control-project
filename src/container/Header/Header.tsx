@@ -12,7 +12,13 @@ const Header = (props: Props) => {
             <AppBar position="static" className="app-bar">
                 <Toolbar>
                     <Logo />
-                    <Menu />
+                    <Menu
+                        home="Home"
+                        recipes="Recipes"
+                        categories="Categories"
+                        favorite="Favorite"
+                        featured_posts="Featured posts"
+                    />
                 </Toolbar>
             </AppBar>
         </>

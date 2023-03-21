@@ -1,16 +1,39 @@
 import { Button } from '@mui/material'
+import { Link } from 'react-router-dom'
 import './Menu.scss'
 
-type Props = {}
+type Props = {
+    home: string
+    recipes: string
+    categories: string
+    favorite: string
+    featured_posts: string
+}
 
-const Menu = (props: Props) => {
+const Menu = ({
+    home,
+    recipes,
+    categories,
+    favorite,
+    featured_posts,
+}: Props) => {
     return (
-        <div>
-            <Button className='nav'>Home</Button>
-            <Button className='nav'>Recipes</Button>
-            <Button className='nav'>Article</Button>
-            <Button className='nav'>Contact</Button>
-            <Button className='nav'>Purchase</Button>
+        <div className="menu_width">
+            <Button className="nav">
+                <Link to={home}>{home}</Link>
+            </Button>
+            <Button className="nav">
+                <Link to={recipes}>{recipes}</Link>
+            </Button>
+            <Button className="nav">
+                <Link to={categories}>{categories}</Link>
+            </Button>
+            <Button className="nav">
+                <Link to={favorite}>{favorite}</Link>
+            </Button>
+            <Button className="nav">
+                <Link to={featured_posts}>{featured_posts}</Link>
+            </Button>
         </div>
     )
 }

@@ -2,7 +2,12 @@ import { StyledEngineProvider } from '@mui/material'
 import { CssBaseline } from '@mui/material'
 import Footer from 'container/Footer/Footer'
 import Header from 'container/Header/Header'
-import Main from 'container/Main/Main'
+import Categories from 'pages/Categories/Categories'
+import Favorite from 'pages/Favorite/Favorite'
+import FeaturedPosts from 'pages/FeaturedPosts/FeaturedPosts'
+import Home from 'pages/Home/Home'
+import Recipes from 'pages/Recipes/Recipes'
+import { Route, Routes } from 'react-router'
 
 type Props = {}
 
@@ -11,7 +16,13 @@ const App = (props: Props) => {
         <StyledEngineProvider injectFirst>
             <CssBaseline />
             <Header />
-            <Main />
+            <Routes>
+                <Route path="home" element={<Home />} />
+                <Route path="recipes" element={<Recipes />} />
+                <Route path="categories" element={<Categories />} />
+                <Route path="favorite" element={<Favorite />} />
+                <Route path="featured_posts" element={<FeaturedPosts />} />
+            </Routes>
             <Footer />
         </StyledEngineProvider>
     )

@@ -10,7 +10,13 @@ const Footer = (props: Props) => {
             <div className="footer_container">
                 <Logo />
                 <div className="footer_menu_margin">
-                    <Menu />
+                    <Menu
+                        home="Home"
+                        recipes="Recipes"
+                        categories="Categories"
+                        favorite="Favorite"
+                        featured_posts="Featured posts"
+                    />
                 </div>
                 <div className="icons_container">
                     <div className="first_background"></div>
