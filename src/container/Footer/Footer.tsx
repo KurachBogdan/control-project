@@ -1,21 +1,20 @@
 import './Footer.scss'
 import Logo from 'components/Logo/Logo'
 import Menu from 'components/Menu/Menu'
+import { MenuItem } from 'common/types'
 
-type Props = {}
+type Props = {
+    links: MenuItem[]
+}
 
-const Footer = (props: Props) => {
+const Footer = ({links}: Props) => {
     return (
         <>
             <div className="footer_container">
                 <Logo />
                 <div className="footer_menu_margin">
                     <Menu
-                        home="Home"
-                        recipes="Recipes"
-                        categories="Categories"
-                        favorite="Favorite"
-                        featured="Featured posts"
+                        links={links}
                     />
                 </div>
                 <div className="icons_container">

@@ -11,19 +11,49 @@ import { Route, Routes } from 'react-router'
 
 type Props = {}
 
+const links = [
+    {
+        path: '/',
+        title: 'Home',
+        Component: Home,
+    },
+    {
+        path: '/recipes',
+        title: 'Recipes',
+        Component: Recipes,
+    },
+    {
+        path: '/categories',
+        title: 'Categories',
+        Component: Categories,
+    },
+    {
+        path: '/favorite',
+        title: 'Favorite',
+        Component: Favorite,
+    },
+    {
+        path: '/featured',
+        title: 'Featured posts',
+        Component: FeaturedPosts,
+    },
+]
+
 const App = (props: Props) => {
     return (
         <StyledEngineProvider injectFirst>
             <CssBaseline />
-            <Header />
+            <Header links={links} />
             <Routes>
-                <Route path="home" element={<Home />} />
-                <Route path="recipes" element={<Recipes />} />
-                <Route path="categories" element={<Categories />} />
-                <Route path="favorite" element={<Favorite />} />
-                <Route path="featured" element={<FeaturedPosts />} />
+                {links.map(({ path, Component }, index) => (
+                    <Route
+                        id={`route_${index}`}
+                        path={path}
+                        element={<Component />}
+                    />
+                ))}
             </Routes>
-            <Footer />
+            <Footer links={links} />
         </StyledEngineProvider>
     )
 }
