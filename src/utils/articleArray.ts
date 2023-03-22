@@ -22,12 +22,12 @@ const articleArray:Article[] = [
     },
     {
         id: 4,
-        category: 'Clothes',
+        category: 'Summer',
         image: '/images/Your_image_here_4.png',
     },
     {
         id: 5,
-        category: 'Clothes',
+        category: 'Autumn',
         image: '/images/Your_image_here_2.png',
     },
     {
@@ -42,7 +42,7 @@ const articleArray:Article[] = [
     },
     {
         id: 8,
-        category: 'Clothes',
+        category: 'Autumn',
         image: '/images/Your_image_here_7.png',
     },
     {

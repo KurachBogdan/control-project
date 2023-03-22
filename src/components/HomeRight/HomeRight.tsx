@@ -10,6 +10,8 @@ type Props = {}
 const HomeRight = (props: Props) => {
     return (
         <div className="home_right">
+        <Button className="wide_btn">Categories</Button>
+            <Categories />
             <Button className="wide_btn">About the author</Button>
             <AboutTheAuthor />
             <Button className="wide_btn">Featured posts</Button>
@@ -24,8 +26,6 @@ const HomeRight = (props: Props) => {
                     </Grid>
                 ))}
             </div>
-            <Button className="wide_btn">Categories</Button>
-            <Categories />
         </div>
     )
 }
