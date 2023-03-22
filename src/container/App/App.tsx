@@ -50,6 +50,7 @@ const App = (props: Props) => {
                         id={`route_${index}`}
                         path={path}
                         element={<Component />}
+                        key={index}
                     />
                 ))}
             </Routes>

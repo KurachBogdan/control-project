@@ -11,7 +11,7 @@ const Menu = ({ links }: Props) => {
     return (
         <div className="menu_width">
             {links.map(({ path, title }, index) => (
-                <Button className="nav" id={`link_${index}`}>
+                <Button className="nav" id={`link_${index}`} key={index}>
                     <Link to={path}>{title}</Link>
                 </Button>
             ))}
