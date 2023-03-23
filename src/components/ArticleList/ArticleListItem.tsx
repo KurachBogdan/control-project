@@ -14,7 +14,21 @@ type Props = {
     image: string
 }
 
+type State = {
+    color: string
+}
+
 class ArticleListItem extends Component<Props> {
+    state = {
+        color: 'inherit',
+    }
+
+    changeColor = () => {
+        this.setState((prevState: State) => ({
+            color: prevState.color === 'inherit' ? 'tomato' : 'inherit'
+        }))
+    }
+
     render() {
         const { category, image } = this.props
         return (
@@ -36,10 +50,11 @@ class ArticleListItem extends Component<Props> {
                 </CardContent>
                 <CardActions>
                     <IconButton
-                        className="icon_button"
+                        className="icon_button {this.state.color}"
                         aria-label="add to favorites"
+                        onClick={this.changeColor}
                     >
-                        <FavoriteIcon />
+                        <FavoriteIcon className={this.state.color} />
                     </IconButton>
                     <Button className="learn_more" size="medium">
                         Learn More
@@ -55,3 +70,4 @@ class ArticleListItem extends Component<Props> {
 // }
 
 export default ArticleListItem
+// {this.state.color}
