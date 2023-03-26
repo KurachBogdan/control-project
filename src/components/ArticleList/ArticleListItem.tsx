@@ -12,25 +12,41 @@ import { Component } from 'react'
 type Props = {
     category: string
     image: string
+    article: string
 }
 
 type State = {
+    likeCount: number
     color: string
 }
 
 class ArticleListItem extends Component<Props> {
     state = {
+        likeCount: 0,
         color: 'inherit',
+    }
+
+    likePost = () => {
+        this.setState((prevState: State) => {
+            return {
+                likeCount: prevState.likeCount + 1,
+            }
+        })
     }
 
     changeColor = () => {
         this.setState((prevState: State) => ({
-            color: prevState.color === 'inherit' ? 'tomato' : 'inherit'
+            color: prevState.color === 'inherit' ? 'tomato' : 'tomato',
         }))
     }
 
+    combine = () => {
+        this.changeColor()
+        this.likePost()
+    }
+
     render() {
-        const { category, image } = this.props
+        const { category, image, article } = this.props
         return (
             <Card variant="outlined" className="card">
                 <CardMedia sx={{ height: 280 }} image={image} />
@@ -43,20 +59,23 @@ class ArticleListItem extends Component<Props> {
                         {category}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        Lizards are a widespread group of squamate reptiles,
-                        with over 6,000 species, ranging across all continents
-                        except Antarctica
+                        {article}
                     </Typography>
                 </CardContent>
                 <CardActions>
                     <IconButton
                         className="icon_button {this.state.color}"
                         aria-label="add to favorites"
-                        onClick={this.changeColor}
+                        onClick={this.combine}
                     >
                         <FavoriteIcon className={this.state.color} />
                     </IconButton>
-                    <Button className="learn_more" size="medium">
+                    {this.state.likeCount}
+                    <Button
+                        onClick={() => alert('Working')}
+                        className="learn_more"
+                        size="medium"
+                    >
                         Learn More
                     </Button>
                 </CardActions>
@@ -65,9 +84,4 @@ class ArticleListItem extends Component<Props> {
     }
 }
 
-// const ArticleListItem = ({ category, image }: Props) => {
-
-// }
-
 export default ArticleListItem
-// {this.state.color}

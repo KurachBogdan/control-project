@@ -10,18 +10,19 @@ type Props = {}
 const HomeRight = (props: Props) => {
     return (
         <div className="home_right">
-        <Button className="wide_btn">Categories</Button>
+            <Button className="wide_btn">Categories</Button>
             <Categories />
             <Button className="wide_btn">About the author</Button>
             <AboutTheAuthor />
             <Button className="wide_btn">Featured posts</Button>
             <div className="right_article_list_container">
-                {anotherArticleArray.map(({ id, category, image }) => (
+                {anotherArticleArray.map(({ id, category, image, article }) => (
                     <Grid item md={5.7} key={id}>
                         {' '}
                         <ArticleListItemRight
                             category={category}
                             image={image}
+                            article={article}
                         />
                     </Grid>
                 ))}

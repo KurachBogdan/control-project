@@ -8,10 +8,10 @@ type Props = {}
 const ArticleList = (props: Props) => {
     return (
         <Grid container className="article_list">
-            {articleArray.map(({ id, category, image }) => (
+            {articleArray.map(({ id, category, image, article }) => (
                 <Grid item md={5.7} key={id}>
                     {' '}
-                    <ArticleListItem category={category} image={image} />
+                    <ArticleListItem article ={article} category={category} image={image} />
                 </Grid>
             ))}
         </Grid>

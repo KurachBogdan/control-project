@@ -12,11 +12,12 @@ import { Component } from 'react'
 type Props = {
     category: string
     image: string
+    article: string
 }
 
 class ArticleListItemRight extends Component<Props> {
     render() {
-        const { category, image } = this.props
+        const { category, image, article } = this.props
         return (
             <Card variant="outlined" className="card">
                 <CardMedia sx={{ height: 180 }} image={image} />
@@ -29,9 +30,7 @@ class ArticleListItemRight extends Component<Props> {
                         {category}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        Lizards are a widespread group of squamate reptiles,
-                        with over 6,000 species, ranging across all continents
-                        except Antarctica
+                        {article}
                     </Typography>
                 </CardContent>
                 <CardActions>
