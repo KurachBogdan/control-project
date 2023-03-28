@@ -40,7 +40,11 @@ class ArticleListItemRight extends Component<Props> {
                     >
                         <FavoriteIcon />
                     </IconButton>
-                    <Button className="learn_more" size="medium">
+                    <Button
+                        onClick={() => alert('Working')}
+                        className="learn_more"
+                        size="medium"
+                    >
                         Learn More
                     </Button>
                 </CardActions>

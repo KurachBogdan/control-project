@@ -10,7 +10,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 import { Component } from 'react'
 
 type Props = {
-    category: string
+    title: string
     image: string
     article: string
 }
@@ -46,7 +46,7 @@ class ArticleListItem extends Component<Props> {
     }
 
     render() {
-        const { category, image, article } = this.props
+        const { title, image, article } = this.props
         return (
             <Card variant="outlined" className="card">
                 <CardMedia sx={{ height: 280 }} image={image} />
@@ -56,7 +56,7 @@ class ArticleListItem extends Component<Props> {
                         gutterBottom
                         component="div"
                     >
-                        {category}
+                        {title}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                         {article}
