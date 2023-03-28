@@ -1,5 +1,6 @@
 import { StyledEngineProvider } from '@mui/material'
 import { CssBaseline } from '@mui/material'
+import Reviews from 'components/Reviews/Reviews'
 import Footer from 'container/Footer/Footer'
 import Header from 'container/Header/Header'
 import Categories from 'pages/Categories/Categories'
@@ -54,6 +55,7 @@ const App = (props: Props) => {
                     />
                 ))}
             </Routes>
+            <Reviews />
             <Footer links={links} />
         </StyledEngineProvider>
     )

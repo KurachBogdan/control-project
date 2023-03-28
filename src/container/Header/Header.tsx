@@ -9,7 +9,7 @@ type Props = {
     links: MenuItem[]
 }
 
-const Header = ({links}: Props) => {
+const Header = ({ links }: Props) => {
     return (
         <>
             <AppBar position="static" className="app-bar">

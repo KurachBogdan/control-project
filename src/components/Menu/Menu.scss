@@ -23,4 +23,7 @@ a:-webkit-any-link {
     &:hover {
         color: #C9A96E;
     }
+    &.menu-item-active {
+        color: #C9A96E;
+    }
 }
