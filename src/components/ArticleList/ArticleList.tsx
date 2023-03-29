@@ -11,7 +11,7 @@ const ArticleList = (props: Props) => {
             {articleArray.map(({ id, title, image, article }) => (
                 <Grid item md={5.7} key={id}>
                     {' '}
-                    <ArticleListItem article ={article} title={title} image={image} />
+                    <ArticleListItem id={id} article ={article} title={title} image={image} />
                 </Grid>
             ))}
         </Grid>
