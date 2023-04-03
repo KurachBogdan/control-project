@@ -3,7 +3,7 @@ import Button from '@mui/material/Button'
 import TextareaAutosize from '@mui/material/TextareaAutosize'
 import TextField from '@mui/material/TextField'
 import { useState } from 'react'
-import Container from '@mui/material/Container/Container'
+import './Reviews.scss'
 
 type Props = {}
 
@@ -69,15 +69,20 @@ const Reviews = (props: Props) => {
     }
 
     return (
-        <Container maxWidth="lg">
-            <Typography variant="h4" component="h2" sx={{ margin: '60px 0' }}>
-                Reviews
+        <div className="reviews">
+            <Typography variant="h4" align="center" component="h2">
+                Comments
             </Typography>
             <div>
                 {reviews.map((item, i) => (
-                    <Card variant="outlined" sx={{ margin: '20px 0' }} key={i}>
+                    <Card
+                        className="comment-card"
+                        variant="outlined"
+                        sx={{ margin: '7px 0' }}
+                        key={i}
+                    >
                         <CardContent>
-                            <div>{item.name}:</div>
+                            <strong>{item.name}:</strong>
                             <div>{item.text}</div>
                         </CardContent>
                     </Card>
@@ -105,7 +110,7 @@ const Reviews = (props: Props) => {
                     Send
                 </Button>
             </form>
-        </Container>
+        </div>
     )
 }
 export default Reviews
