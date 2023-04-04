@@ -1,10 +1,10 @@
 type Props = {}
 
-const Categories = (props: Props) => {
-    return 
+const ThisCategory = (props: Props) => {
+    return <div>ThisCategory</div>
 }
 
-export default Categories
+export default ThisCategory
 
 // import ArticleListItem from 'components/ArticleList/ArticleListItem'
 // import { useParams } from 'react-router-dom'
@@ -23,23 +23,28 @@ export default Categories
 // }
 
 // const filterArticlesByCategory = (category: string): Article[] => {
-//     return articleArray.filter((item) => item.category === fashion)
+//     return articleArray.filter((id) => id.category === category)
 // }
 
-// const Categories = () => {
+// const ThisCategory = () => {
 //     const { category } = useParams<RouteParams>()
 
-//     const filteredArticles = filterArticlesByCategory(category)
+//     const filteredArticles = filterArticlesByCategory('fashion')
 
 //     return (
 //         <div>
 //             {filteredArticles.map((item) => (
 //                 <div key={item.id}>
-//                     <ArticleListItem />
+//                     <ArticleListItem
+//                         id={id}
+//                         title={title}
+//                         article={article}
+//                         image={image}
+//                     />
 //                 </div>
 //             ))}
 //         </div>
 //     )
 // }
 
-// export default Categories
+// export default ThisCategory
