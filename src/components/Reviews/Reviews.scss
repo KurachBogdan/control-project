@@ -1,6 +1,12 @@
+.review_title {
+    font-family: 'PT Serif', serif;
+    color: black;
+}
+
 .reviews {
     display: flex;
     flex-direction: column;
+    cursor: context-menu;
 }
 
 .comment-card {
@@ -8,5 +14,21 @@
     font-family: 'PT Sans', sans-serif;
     font-size: 14px;
     line-height: 24px;
+    color: black;
+}
+
+.css-46bh2p-MuiCardContent-root:last-child {
+    padding: 7px 14px;
+}
+
+.form_name_field,
+.form_text_field,
+.form_btn {
+    width: 100%;
+}
+
+form h3 {
+    text-align: center;
+    font-family: 'PT Serif', serif;
     color: black;
 }

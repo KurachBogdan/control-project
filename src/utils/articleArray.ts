@@ -79,8 +79,4 @@ const articleArray: Article[] = [
     },
 ]
 
-// const filterArticlesByCategory = (category: string): Article[] => {
-//     return articleArray.filter((item) => item.category === category)
-//   }
-
 export default articleArray

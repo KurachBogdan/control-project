@@ -1,23 +1,7 @@
-import MainArticle from 'components/MainArticle/MainArticle'
-import Reviews from 'components/Reviews/Reviews'
-import Container from '@mui/material/Container/Container'
-import './Categories.scss'
-import ReviewsForm from 'components/Reviews/ReviewsForm'
-
 type Props = {}
 
 const Categories = (props: Props) => {
-    return (
-        <>
-            <Container maxWidth="lg" className="article_with_comments">
-                <MainArticle category="Summer" />
-                <Reviews />
-            </Container>
-            <Container>
-                <ReviewsForm />
-            </Container>
-        </>
-    )
+    return 
 }
 
 export default Categories

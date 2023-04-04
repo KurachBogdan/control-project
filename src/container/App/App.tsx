@@ -2,7 +2,7 @@ import { StyledEngineProvider } from '@mui/material'
 import { CssBaseline } from '@mui/material'
 import Footer from 'container/Footer/Footer'
 import Header from 'container/Header/Header'
-import Categories from 'pages/Categories/Categories'
+import CommentPage from 'pages/CommentPage/CommentPage'
 import Favorite from 'pages/Favorite/Favorite'
 import FeaturedPosts from 'pages/FeaturedPosts/FeaturedPosts'
 import Home from 'pages/Home/Home'
@@ -21,11 +21,6 @@ const links = [
         path: '/recipes',
         title: 'Recipes',
         Component: Recipes,
-    },
-    {
-        path: '/categories',
-        title: 'Categories',
-        Component: Categories,
     },
     {
         path: '/favorite',
@@ -53,6 +48,7 @@ const App = (props: Props) => {
                         key={index}
                     />
                 ))}
+                <Route path='/comment_page' element={<CommentPage />}/>
             </Routes>
             <Footer links={links} />
         </StyledEngineProvider>

@@ -70,7 +70,12 @@ const Reviews = (props: Props) => {
 
     return (
         <div className="reviews">
-            <Typography variant="h4" align="center" component="h2">
+            <Typography
+                className="review_title"
+                variant="h4"
+                align="center"
+                component="h2"
+            >
                 Comments
             </Typography>
             <div>
@@ -92,6 +97,7 @@ const Reviews = (props: Props) => {
                 <h3>Please, leave a review</h3>
                 <div>
                     <TextField
+                        className="form_name_field"
                         label="Name"
                         value={newReview.name}
                         onChange={handleName}
@@ -100,13 +106,14 @@ const Reviews = (props: Props) => {
                 <br />
                 <div>
                     <TextareaAutosize
+                    className='form_text_field'
                         minRows={7}
                         placeholder="Text"
                         value={newReview.text}
                         onChange={handleText}
                     />
                 </div>
-                <Button type="submit" variant="outlined">
+                <Button className='form_btn' type="submit" variant="outlined">
                     Send
                 </Button>
             </form>
