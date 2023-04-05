@@ -15,10 +15,10 @@ type Props = {
     id: number
     title: string
     image: string
-    article: string
+    content: string
 }
 
-const ArticleListItem = ({ id, title, image, article }: Props) => {
+const ArticleListItem = ({ id, title, image, content }: Props) => {
     const isLiked = useAppSelector((state) => state.articlesLikeState[id])
     const dispatch = useAppDispatch()
 
@@ -34,7 +34,7 @@ const ArticleListItem = ({ id, title, image, article }: Props) => {
                     {title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {article}
+                    {content}
                 </Typography>
             </CardContent>
             <CardActions>

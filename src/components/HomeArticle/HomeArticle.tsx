@@ -9,7 +9,7 @@ type Props = {
     author: string
     commentsCount?: number
     comments?: string
-    article: string
+    content: string
 }
 
 const HomeArticle = ({
@@ -19,7 +19,7 @@ const HomeArticle = ({
     author,
     commentsCount,
     comments,
-    article,
+    content,
 }: Props) => {
     return (
         <div className="main_article">
@@ -37,7 +37,7 @@ const HomeArticle = ({
                         </Link>
                     </Button>
                 </p>
-                <article className="article_main">{article}</article>
+                <article className="article_main">{content}</article>
             </div>
         </div>
     )

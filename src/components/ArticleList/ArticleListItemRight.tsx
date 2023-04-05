@@ -12,12 +12,12 @@ import { Component } from 'react'
 type Props = {
     category: string
     image: string
-    article: string
+    content: string
 }
 
 class ArticleListItemRight extends Component<Props> {
     render() {
-        const { category, image, article } = this.props
+        const { category, image, content } = this.props
         return (
             <Card variant="outlined" className="card">
                 <CardMedia sx={{ height: 180 }} image={image} />
@@ -30,7 +30,7 @@ class ArticleListItemRight extends Component<Props> {
                         {category}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        {article}
+                        {content}
                     </Typography>
                 </CardContent>
                 <CardActions>

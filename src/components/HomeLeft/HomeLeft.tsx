@@ -14,7 +14,7 @@ const HomeLeft = (props: Props) => {
                 author="Rickie Baroch"
                 commentsCount={4}
                 comments="comments"
-                article="Sed ut perspiciatis unde omnis iste natus error sit
+                content="Sed ut perspiciatis unde omnis iste natus error sit
                 voluptatem accusantium doloremque laudantium, totam rem sed
                 ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem."

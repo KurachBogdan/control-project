@@ -13,13 +13,13 @@ const CommentPage = (props: Props) => {
         <React.Fragment>
             <Container maxWidth="lg" className="article_with_comments">
                 {commentPageArticleArray.map(
-                    ({ category, title, date, author, article, id }) => (
+                    ({ category, title, date, author, content, id }) => (
                         <HomeArticle
                             category={category}
                             title={title}
                             date={date}
                             author={author}
-                            article={article}
+                            content={content}
                             key={id}
                         />
                     )
