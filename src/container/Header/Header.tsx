@@ -12,7 +12,7 @@ type Props = {
 const Header = ({ links }: Props) => {
     return (
         <>
-            <AppBar position="static" className="app-bar">
+            <AppBar position="sticky" className="app-bar">
                 <Toolbar>
                     <Logo />
                     <Menu links={links} />

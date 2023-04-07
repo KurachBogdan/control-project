@@ -3,6 +3,7 @@ import { Grid } from '@mui/material'
 import { useAppSelector } from 'redux/hooks'
 import articleArray from 'utils/articleArray'
 import Container from '@mui/material/Container/Container'
+import './Favorite.scss'
 
 type Props = {}
 
@@ -26,7 +27,7 @@ const Favorite = (props: Props) => {
     )
 
     return (
-        <Container maxWidth="lg" className="home_container">
+        <Container maxWidth="lg" className="favorite_container">
             <Grid container className="article_list">
                 {likedArticles.map(({ id, title, image, content }) => (
                     <Grid item md={2.8} key={id}>

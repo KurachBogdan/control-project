@@ -36,22 +36,24 @@ const links = [
 
 const App = (props: Props) => {
     return (
-        <StyledEngineProvider injectFirst>
-            <CssBaseline />
-            <Header links={links} />
-            <Routes>
-                {links.map(({ path, Component }, index) => (
-                    <Route
-                        id={`route_${index}`}
-                        path={path}
-                        element={<Component />}
-                        key={index}
-                    />
-                ))}
-                <Route path='/comment_page' element={<CommentPage />}/>
-            </Routes>
-            <Footer links={links} />
-        </StyledEngineProvider>
+        <div className='parent'>
+            <StyledEngineProvider injectFirst>
+                <CssBaseline />
+                <Header links={links} />
+                <Routes>
+                    {links.map(({ path, Component }, index) => (
+                        <Route
+                            id={`route_${index}`}
+                            path={path}
+                            element={<Component />}
+                            key={index}
+                        />
+                    ))}
+                    <Route path="/comment_page" element={<CommentPage />} />
+                </Routes>
+                <Footer links={links} />
+            </StyledEngineProvider>
+        </div>
     )
 }
 
