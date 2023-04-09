@@ -1,25 +1,36 @@
 import ArticleListItem from './ArticleListItem'
 import './ArticleList.scss'
 import { Grid } from '@mui/material'
-import articleArray from 'utils/articleArray'
+import Typography from '@mui/material/Typography'
+import { Article } from 'utils/articleArray'
 
-type Props = {}
+type Props = {
+    articles: Article[]
+    category?: string
+}
 
-const ArticleList = (props: Props) => {
-
+const ArticleList: React.FC<Props> = ({ articles, category }) => {
     return (
         <Grid container className="article_list">
-            {articleArray.map(({ id, title, image, content }) => (
-                <Grid item md={5.7} key={id}>
-                    {' '}
-                    <ArticleListItem
-                        id={id}
-                        title={title}
-                        content={content}
-                        image={image}
-                    />
-                </Grid>
-            ))}
+            {articles.length ? (
+                articles.map(({ id, title, image, content }, index) => (
+                    <Grid item md={5.7} key={`article_item_${index}`}>
+                        <ArticleListItem
+                            id={id}
+                            title={title}
+                            content={content}
+                            image={image}
+                        />
+                    </Grid>
+                ))
+            ) : (
+                <Typography
+                    className="article_list_item_category"
+                    component="div"
+                >
+                    No matches with category "{category}"
+                </Typography>
+            )}
         </Grid>
     )
 }

@@ -1,4 +1,4 @@
-type Article = {
+export type Article = {
     id: number
     category: string
     image: string

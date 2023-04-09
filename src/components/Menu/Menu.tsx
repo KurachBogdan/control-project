@@ -10,18 +10,26 @@ type Props = {
 const Menu = ({ links }: Props) => {
     return (
         <div className="menu_width">
-            {links.map(({ path, title }, index) => (
-                <Button className="nav" id={`link_${index}`} key={index}>
-                    <NavLink
-                        className={({ isActive }) =>
-                            isActive ? 'menu-item-active' : 'menu-item'
-                        }
-                        to={path}
-                    >
-                        {title}
-                    </NavLink>
-                </Button>
-            ))}
+            {links.map(({ path, title }, index) => {
+                if (path !== '/comment_page') {
+                    return (
+                        <Button
+                            className="nav"
+                            id={`link_${index}`}
+                            key={index}
+                        >
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? 'menu-item-active' : 'menu-item'
+                                }
+                                to={path.replace('*', '')}
+                            >
+                                {title}
+                            </NavLink>
+                        </Button>
+                    )
+                }
+            })}
         </div>
     )
 }

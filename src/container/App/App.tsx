@@ -13,7 +13,7 @@ type Props = {}
 
 const links = [
     {
-        path: '/',
+        path: '/*',
         title: 'Home',
         Component: Home,
     },
@@ -32,11 +32,16 @@ const links = [
         title: 'Featured posts',
         Component: FeaturedPosts,
     },
+    {
+        path: '/comment_page',
+        title: 'Comment Page',
+        Component: CommentPage,
+    },
 ]
 
 const App = (props: Props) => {
     return (
-        <div className='parent'>
+        <div className="parent">
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
                 <Header links={links} />
@@ -46,10 +51,9 @@ const App = (props: Props) => {
                             id={`route_${index}`}
                             path={path}
                             element={<Component />}
-                            key={index}
+                            key={`route_${index}`}
                         />
                     ))}
-                    <Route path="/comment_page" element={<CommentPage />} />
                 </Routes>
                 <Footer links={links} />
             </StyledEngineProvider>
