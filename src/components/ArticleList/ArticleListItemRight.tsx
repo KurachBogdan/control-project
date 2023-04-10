@@ -2,11 +2,8 @@ import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
-import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import './ArticleListItem.scss'
-import { IconButton } from '@mui/material'
-import FavoriteIcon from '@mui/icons-material/Favorite'
 import { Component } from 'react'
 
 type Props = {
@@ -33,21 +30,7 @@ class ArticleListItemRight extends Component<Props> {
                         {content}
                     </Typography>
                 </CardContent>
-                <CardActions>
-                    <IconButton
-                        className="icon_button"
-                        aria-label="add to favorites"
-                    >
-                        <FavoriteIcon />
-                    </IconButton>
-                    <Button
-                        onClick={() => alert('Working')}
-                        className="learn_more"
-                        size="medium"
-                    >
-                        Learn More
-                    </Button>
-                </CardActions>
+                <CardActions></CardActions>
             </Card>
         )
     }
