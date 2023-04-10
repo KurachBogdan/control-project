@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import { Button } from '@mui/material'
 import { NavLink } from 'react-router-dom'
 import { MenuItem } from 'common/types'
