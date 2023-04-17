@@ -1,7 +1,14 @@
-type Props = {}
+import ScrollToTopOnMount from 'utils/scrollToTopOnMount'
+
+type Props = {
+}
 
 const Recipes = (props: Props) => {
-    return <div>Recipes</div>
+    return (
+        <>
+            <ScrollToTopOnMount />
+        </>
+    )
 }
 
 export default Recipes

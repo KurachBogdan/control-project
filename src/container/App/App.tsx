@@ -1,5 +1,6 @@
 import { StyledEngineProvider } from '@mui/material'
 import { CssBaseline } from '@mui/material'
+import SpecificCategory from 'components/SpecificCategory/SpecificCategory'
 import Footer from 'container/Footer/Footer'
 import Header from 'container/Header/Header'
 import CommentPage from 'pages/CommentPage/CommentPage'
@@ -36,6 +37,11 @@ const links = [
         path: '/comment_page',
         title: 'Comment Page',
         Component: CommentPage,
+    },
+    {
+        path: '/article_page',
+        title: 'Article Page',
+        Component: SpecificCategory,
     },
 ]
 

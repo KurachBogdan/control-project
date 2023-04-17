@@ -10,6 +10,9 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { addLike, removeLike } from 'redux/likeReducer'
+import { useNavigate } from 'react-router-dom'
+import { Article } from 'utils/articleArray'
+import { useState } from 'react'
 
 type Props = {
     id: number
@@ -19,6 +22,20 @@ type Props = {
 }
 
 const ArticleListItem = ({ id, title, image, content }: Props) => {
+    const [currentArticle, setArticles] = useState<Article[] | []>([])
+    const navigate = useNavigate()
+    const onNavigate = (route?: string) => {
+        navigate(route ? `/${route.toLowerCase()}` : '/')
+    }
+    const isArticleSelected = (id: number) => {
+        const pathname = location.pathname.slice(1)
+        return id === id
+    }
+
+
+
+
+
     const isLiked = useAppSelector((state) => state.articlesLikeState[id])
     const dispatch = useAppDispatch()
 
@@ -50,9 +67,11 @@ const ArticleListItem = ({ id, title, image, content }: Props) => {
                     {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                 </IconButton>
                 <Button
-                    onClick={() => alert('Working')}
                     className="learn_more"
                     size="medium"
+                    key={`article_${id}`}
+                    onClick={() => onNavigate(id)}
+                    // disabled={isArticleSelected(id)}
                 >
                     Learn More
                 </Button>
