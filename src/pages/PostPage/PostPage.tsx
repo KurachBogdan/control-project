@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import articleArray from 'utils/articleArray'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
@@ -13,8 +13,9 @@ import { Button } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 const PostPage = () => {
-    const { id } = useParams<{ id: string }>()
-    const article = articleArray.find((a) => a.id === parseInt(id))
+    const { id } = useParams()
+    const location = useLocation()
+    const article = articleArray.find((a) => a.id === Number(id))
 
     if (!article) {
         return <div>Post not found</div>
@@ -23,9 +24,9 @@ const PostPage = () => {
     return (
         <React.Fragment>
             <ScrollToTopOnMount />
-            <Container maxWidth="lg" className="article_with_comments">
+            <Container maxWidth="md" className="article_with_comments">
                 <Card variant="outlined" className="card">
-                    <CardMedia sx={{ height: 280 }} image={article.image} />
+                    <CardMedia sx={{ height: 640 }} image={article.image} />
                     <CardContent>
                         <Typography
                             className="article_list_item_category"
@@ -40,9 +41,13 @@ const PostPage = () => {
                     </CardContent>
                     <CardActions>
                         {location.pathname !== '/*' && (
-                            <Button size="medium">
-                                <Link className="learn_more" to="/*">
-                                    <p>..to home</p>
+                            <Button
+                                variant="outlined"
+                                sx={{ borderRadius: 4, height: 35 }}
+                                size="medium"
+                            >
+                                <Link className="learn_more" to="/">
+                                    <p>. . . to home</p>
                                 </Link>
                             </Button>
                         )}

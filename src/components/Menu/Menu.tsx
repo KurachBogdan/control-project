@@ -12,7 +12,10 @@ const Menu = ({ links }: Props) => {
     return (
         <div className="menu_width">
             {links.map(({ path, title }, index) => {
-                if (path !== '/comment_page') {
+                if (
+                    !path.includes('comment_page') &&
+                    !path.includes('post/:id')
+                ) {
                     return (
                         <Button
                             className="nav"
