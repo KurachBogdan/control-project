@@ -1,7 +1,7 @@
 type Props = {}
 
 const FeaturedPosts = (props: Props) => {
-    return <div>FeaturedPosts</div>
+    return <div></div>
 }
 
 export default FeaturedPosts

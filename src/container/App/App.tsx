@@ -1,12 +1,12 @@
 import { StyledEngineProvider } from '@mui/material'
 import { CssBaseline } from '@mui/material'
-import SpecificCategory from 'components/SpecificCategory/SpecificCategory'
 import Footer from 'container/Footer/Footer'
 import Header from 'container/Header/Header'
 import CommentPage from 'pages/CommentPage/CommentPage'
 import Favorite from 'pages/Favorite/Favorite'
 import FeaturedPosts from 'pages/FeaturedPosts/FeaturedPosts'
 import Home from 'pages/Home/Home'
+import PostPage from 'pages/PostPage/PostPage'
 import Recipes from 'pages/Recipes/Recipes'
 import { Route, Routes } from 'react-router'
 
@@ -39,10 +39,10 @@ const links = [
         Component: CommentPage,
     },
     {
-        path: '/article_page',
-        title: 'Article Page',
-        Component: SpecificCategory,
-    },
+        path: '/post/:id',
+        title: 'Post',
+        Component: PostPage,
+    }
 ]
 
 const App = (props: Props) => {
