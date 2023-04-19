@@ -1,8 +1,8 @@
 export type Article = {
     id: number
     category: string
-    image: string
     title: string
+    image: string
     content: string
     contentExtended: string
 }

@@ -16,11 +16,11 @@ const HomeRight = (props: Props) => {
             <AboutTheAuthor />
             <Button className="wide_btn">Featured posts</Button>
             <div className="right_article_list_container">
-                {anotherArticleArray.map(({ id, category, image, content }) => (
+                {anotherArticleArray.map(({ id, title, image, content }) => (
                     <Grid item md={5.7} key={id}>
                         {' '}
                         <ArticleListItemRight
-                            category={category}
+                            title={title}
                             image={image}
                             content={content}
                         />
