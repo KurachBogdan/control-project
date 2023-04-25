@@ -8,9 +8,15 @@ import FeaturedPosts from 'pages/FeaturedPosts/FeaturedPosts'
 import Home from 'pages/Home/Home'
 import PostPage from 'pages/PostPage/PostPage'
 import Recipes from 'pages/Recipes/Recipes'
+import { useState } from 'react'
 import { Route, Routes } from 'react-router'
 
 type Props = {}
+
+type CartDataProps = {
+    totalCount: number
+    totalPrice: number
+}
 
 const links = [
     {
@@ -23,7 +29,7 @@ const links = [
         title: 'Recipes',
         Component: Recipes,
     },
-    {
+    { 
         path: '/favorite',
         title: 'Favorite',
         Component: Favorite,
@@ -42,21 +48,33 @@ const links = [
         path: '/post/:id',
         title: 'Post',
         Component: PostPage,
-    }
+    },
 ]
 
 const App = (props: Props) => {
+    const [cartData, setCartData] = useState<CartDataProps>({
+        totalCount: 0,
+        totalPrice: 0,
+    })
+
+    const addProductToCart = (count: number, price: number) => {
+        setCartData((prevState) => ({
+            totalCount: prevState.totalCount + count,
+            totalPrice: prevState.totalPrice + count * price,
+        }))
+    }
+
     return (
         <div className="parent">
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
-                <Header links={links} />
+                <Header links={links} cartData={cartData} />
                 <Routes>
                     {links.map(({ path, Component }, index) => (
                         <Route
                             id={`route_${index}`}
                             path={path}
-                            element={<Component />}
+                            element={<Component addProductToCart={addProductToCart} />}
                             key={`route_${index}`}
                         />
                     ))}

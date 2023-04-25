@@ -5,14 +5,21 @@ import Categories from 'components/Categories/Categories'
 import anotherArticleArray from 'utils/anotherArticleArray'
 import ArticleListItemRight from 'components/ArticleList/ArticleListItemRight'
 
-type Props = {}
+type Props = {
+    addProductToCart: (count: number, price: number) => void
+}
 
-const HomeRight = (props: Props) => {
+const HomeRight = ({ addProductToCart }: Props) => {
     return (
         <div className="home_right">
             <Button className="wide_btn">Categories</Button>
             <Categories />
-            <Button className="wide_btn">About the author</Button>
+            <Button
+                className="wide_btn"
+                onClick={() => addProductToCart(2, 500)}
+            >
+                About the author
+            </Button>
             <AboutTheAuthor />
             <Button className="wide_btn">Featured posts</Button>
             <div className="right_article_list_container">
