@@ -6,11 +6,9 @@ import Vehicle from 'components/Vehicle/Vehicle'
 import './Home.scss'
 import ScrollToTopOnMount from 'utils/scrollToTopOnMount'
 
-type Props = {
-    addProductToCart: (count: number, price: number) => void
-}
+type Props = {}
 
-const Home = ({ addProductToCart }: Props) => {
+const Home = (props: Props) => {
     return (
         <>
             <ScrollToTopOnMount />
@@ -18,7 +16,7 @@ const Home = ({ addProductToCart }: Props) => {
             <NiceSwiper />
             <Container maxWidth="lg" className="home_container">
                 <HomeLeft />
-                <HomeRight addProductToCart={addProductToCart} />
+                <HomeRight />
             </Container>
         </>
     )
